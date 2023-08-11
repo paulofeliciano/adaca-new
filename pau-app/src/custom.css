@@ -1,0 +1,126 @@
+html, body {
+    width: 100%;
+    height:100%;
+}
+
+body {
+    background: linear-gradient(-45deg, #6A4929, #9a632d, #1c535e, #0D2125);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.App {
+    color: #fff;
+    min-height: 100vh;
+    margin-top: -30px;
+    padding-top: 50px;
+    font-family: 'Nunito Sans', sans-serif;
+    display: flex;
+}
+h1,h2,h3,h4,h5 { 
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+}
+.App .title {
+    padding: 40px;
+    position: relative;
+    font-family: 'Oswald', sans-serif;
+    width: 60%;
+ }
+ .App .title h1 {
+    font-size: 90px;
+ }
+ .App .radio-group {
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     height: 40px;
+ }
+ .App .radio-group label {
+     display: flex;
+     align-items: center;
+     margin-left: 10px;
+ }
+ .App .container {
+    width: 40%;
+ }
+
+ @media(max-width: 991px) {
+    .App {
+        display: block;
+    }
+    .App .title, .App .container {
+        width: 100%;
+    }
+ }
+
+ .container h1, .container h2, .container h3, .container h4, .container h5 {
+    color: #692B1F;
+    margin-bottom: 0px;
+ }
+ .container .first-group, .container .second-group, .container .third-group {
+     background-color: #fff;
+     color: #692B1F;
+     width: 100%;
+     display: block;
+     margin-right: 20px;
+     padding: 10px 30px 20px 30px;
+     opacity: 0.5;
+     transform: translate3d(-10px, 0, 0); /* ADDED - start x position as -50px */
+     cursor: pointer;
+     transition: 0.25s all ease-in-out;
+     box-shadow: 5px 5px 15px 5px #52525270;
+
+ }
+ .container .first-group:hover, .container .second-group:hover, .container .third-group:hover {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+ }
+
+input[type=radio]:hover + label {
+    cursor: pointer;
+}
+input[type=radio] {
+    visibility: hidden;
+    transition-duration: 0.1s;
+}
+input[type="radio"]:checked + label {
+    transition-duration: 0.1s;
+}
+input[type="radio"]:checked + label {
+   transition-duration: 0.1s;
+   text-decoration: underline;
+}
+input[type=submit] {
+    background-color: #fff;
+    width: 100%;
+    color: black;
+    border: none;
+    border-radius: 0px;
+    margin-left: -10px;
+    transition-duration: 0.4s;
+    opacity: 0.5;
+}
+input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
+    transition-duration: 0.4s;
+    scale: 1.05;
+    opacity: 1;
+    background-color: #fff;
+    color: #0D2125;
+    border: none;
+}
+.submit-button {
+    position: relative;
+}
